@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <center> <h3>Result Information</h3></center>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">FileLocation</th>
+                    <th scope="col">PageNumber</th>
+                    <th scope="col">Rotation Degree</th>
+                    <th scope="col">Download Link </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>    
+                    <td>static/Output_Pdfs/{{filename}}</td>
+                    <td>{{PageNumber}}</td>
+                    <td>{{RotationDegree}}</td>
+                    <td><a href="../static/Output_Pdfs/{{filename}}">Click here to Download PDF File</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <iframe src="../static/Output_Pdfs/{{filename}}" height="1000px" width="100%" frameborder="0"></iframe>
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>
